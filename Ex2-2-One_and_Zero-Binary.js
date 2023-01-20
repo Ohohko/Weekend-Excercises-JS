@@ -10,3 +10,14 @@
 // Testing: [1, 1, 1, 1] ==> 15
 // Testing: [1, 0, 1, 1] ==> 11
 // However, the arrays can have varying lengths, not just limited to 4
+
+
+const binaryInteger = (binary) => binary.reduce(function(acc, val, idx) {
+      return acc + val * Math.pow(2, binary.length - idx - 1);
+    }, 0);
+
+//testing
+    console.log(binaryInteger([1,0,0,0,1,1,0,1,0,0,0,1,1,1,1,1,1,1,1]));
+//result 289023
+
+  
